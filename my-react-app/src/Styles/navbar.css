@@ -1,0 +1,220 @@
+/* Header and Top Bar Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.top-bar {
+  background: #f8f9fa;
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #eee;
+  min-height: 25px;
+}
+
+.contact-info2 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-info2 a, 
+.contact-info2 span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info2 a:hover {
+  color: #ff6b6b;
+}
+
+.social-links1 {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links1 a {
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.social-links1 a:hover {
+  color: #ff6b6b;
+}
+
+/* Main Navbar Styles */
+.navbar {
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo h1 {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links li a:hover {
+  color: #ff6b6b;
+}
+
+.book-now a {
+  background: #ff6b6b;
+  color: white !important;
+  padding: 0.6rem 1.5rem !important;
+  border-radius: 50px;
+  transition: background 0.3s ease !important;
+}
+
+.book-now a:hover {
+  background: #ff5252;
+  color: white !important;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+      gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+      display: none;
+  }
+
+  .menu-button {
+      display: block;
+  }
+
+  .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      flex-direction: column;
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-links li a {
+      display: block;
+      padding: 1rem;
+  }
+
+  .book-now {
+      margin: 1rem 0;
+  }
+
+  .book-now a {
+      display: inline-block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 1rem;
+  }
+
+  .logo h1 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Login and sign-up buttons */
+.auth-buttons .button-group {
+  display: flex;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  margin-right: 1rem;
+ 
+}
+
+.auth-buttons .button-group a {
+  padding: 0.5rem 1rem;
+  font-size: .8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background:  #ff6b6b;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.auth-buttons .button-group a:first-child {
+  border-right: 1px solid #e0e0e0;
+}
+
+.auth-buttons .button-group a:hover {
+  background: #f5f5f5;
+  color: #ff6b6b;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .auth-buttons .button-group {
+      margin: 1rem auto;
+      width: 200px;
+  }
+
+  .auth-buttons .button-group a {
+      flex: 1;
+      text-align: center;
+  }
+}

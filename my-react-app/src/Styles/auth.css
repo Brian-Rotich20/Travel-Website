@@ -1,0 +1,264 @@
+/* Base styles */
+:root {
+    --primary-color: #0056b3;
+    --primary-light: #e6f0ff;
+    --secondary-color: #f8f9fa;
+    --accent-color: #ff6b6b;
+    --text-color: #333333;
+    --text-muted: #6c757d;
+    --border-color: #e1e4e8;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    /* --navbar-height: 60px; Estimated navbar height */
+  }
+  
+  .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--navbar-height));
+    background-color: var(--secondary-color);
+    padding: 40px 20px; /* Increased top/bottom padding */
+    margin-top: 50px
+  }
+  
+  .auth-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 450px;
+    padding: 32px;
+    margin: 20px 0; /* Add vertical margin to the card */
+  }
+  
+  /* Header styles */
+  .auth-header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  .auth-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 8px;
+  }
+  
+  .auth-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  
+  .auth-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+  
+  .auth-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form styles */
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--text-muted);
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: var(--transition);
+  }
+  
+  .form-input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.8;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+  }
+  
+  .form-input.error {
+    border-color: var(--error-color);
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .password-toggle:hover {
+    color: var(--text-color);
+  }
+  
+  /* Remember/Forgot section */
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+  }
+  
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .checkbox-input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+  }
+  
+  /* Submit button */
+  .submit-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 8px;
+  }
+  
+  .submit-button:hover {
+    background-color: #004494;
+  }
+  
+  .submit-button:active {
+    transform: translateY(1px);
+  }
+  
+  .submit-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .submit-button.loading {
+    opacity: 0.8;
+  }
+  
+  /* Social login section */
+  .social-divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+  }
+  
+  .divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--border-color);
+  }
+  
+  .divider-text {
+    padding: 0 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .social-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .auth-card {
+      padding: 24px;
+      margin: 10px 0; /* Smaller margin on mobile */
+    }
+    
+    .social-buttons {
+      flex-direction: column;
+    }
+  }
+  
+  /* If you have a fixed navbar */
+  body {
+    padding-top: var(--navbar-height); /* Add padding to body if navbar is fixed */
+  }
+  
+  /* Alternative approach if you don't want to use body padding */
+  /* Uncomment this if your navbar is fixed and you prefer this approach */
+  /*
+  .main-content {
+    padding-top: var(--navbar-height);
+  }
+  */
